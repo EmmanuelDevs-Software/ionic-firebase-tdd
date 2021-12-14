@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "firestore-ionic-testing",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

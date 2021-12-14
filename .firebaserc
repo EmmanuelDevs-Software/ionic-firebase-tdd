@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rental-85c78": {
+      "hosting": {
+        "app": [
+          "rental-85c78"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rental-85c78"
+  }
+}

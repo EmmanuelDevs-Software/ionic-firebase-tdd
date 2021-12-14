@@ -1,0 +1,7 @@
+{
+  "name": "firestore-ionic-testing",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
