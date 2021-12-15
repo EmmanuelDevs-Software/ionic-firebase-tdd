@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-button class="backButton">back</ion-button>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <div class="container">
+    <h1  class="header ion-padding" style="color: black;" color="primary">Register User</h1>
+  <form class="register-form">
+    <mat-form-field appearance="outline" class="email">
+        <input class="email" matInput  #email required placeholder="Email">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="password">
+        <input class="password" matInput #password required placeholder="Password">
+    </mat-form-field>
+    <button mat-raised-button class="register"  
+    type="submit" (click)="signUp(email, password)">Register</button>
+
+</form>
+</div>
+</ion-content>

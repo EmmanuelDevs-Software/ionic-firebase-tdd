@@ -60,6 +60,57 @@ describe('UserAuthenticationService', () => {
     expect(loginResult).toEqual(false);
   });
 
+  it('reset email', async () => {
+    const { email, password } = generateEmailAndPassword();
+
+    const result = await service.createAccount(email, password);
+    expect(result).toEqual(true);
+
+    const loginResult = await service.login(email, password);
+    expect(loginResult).toEqual(true);
+
+    const resetPassword = await service.PasswordRecover(email);
+    expect(resetPassword).toEqual(true);
+  });
+
+  it('isLoggin', async () => {
+    const { email, password } = generateEmailAndPassword();
+    let user = {
+      user: 1,
+      email: email,
+      displayName: 'user.displayName',
+      photoURL: 'user.photoURL',
+      emailVerified: 'user.emailVerified',
+    };
+    const result = await service.createAccount(email, password);
+    expect(result).toEqual(true);
+
+    const loginResult = await service.login(email, password);
+    expect(loginResult).toEqual(true);
+
+    const isLoggedIn = await service.isLoggedIn(user);
+    expect(isLoggedIn).toEqual(true);
+  });
+
+  it('SetUserData', async () => {
+    const { email, password } = generateEmailAndPassword();
+    let user = {
+      user: 1,
+      email: email,
+      displayName: 'user.displayName',
+      photoURL: 'user.photoURL',
+      emailVerified: 'user.emailVerified',
+    };
+    const result = await service.createAccount(email, password);
+    expect(result).toEqual(true);
+
+    const loginResult = await service.login(email, password);
+    expect(loginResult).toEqual(true);
+
+    const setUserData = await service.SetUserData(user);
+    expect(setUserData).toEqual(false);
+  });
+
   it('logout', async () => {
     const { email, password } = generateEmailAndPassword();
 

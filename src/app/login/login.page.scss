@@ -9,9 +9,19 @@ ion-content{
     --background: white;
 }
 button.login {
-    width: 100%;
+    width: 50%;
     border-radius: 18px;
 }
+
+input{
+    color: black;
+}
+
+button.register {
+    width: 50%;
+    border-radius: 18px;
+}
+
 .header {
     margin-bottom: 2em;
     font-size: 3em;
