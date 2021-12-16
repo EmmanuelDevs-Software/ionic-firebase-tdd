@@ -5,13 +5,13 @@
   <div class="container">
     <form>
       <mat-form-field appearance="outline" class="email">
-          <input matInput placeholder="Email">
+          <input matInput type="email"  #email required placeholder="Email">
       </mat-form-field>
       <mat-form-field appearance="outline" class="password">
-          <input matInput placeholder="Password">
+          <input matInput type="password"  #password required placeholder="Password">
       </mat-form-field>
       <button mat-raised-button class="login"  
-          color="primary">Login</button>
+          color="primary" (click)="logIn(email, password)">Login</button>
           <button mat-raised-button class="register"  
           color="secondary" (click)="goToRegister()">Register</button>
   </form> 

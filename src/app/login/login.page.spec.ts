@@ -7,6 +7,9 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { IonicModule } from '@ionic/angular';
 
 import { LoginPage } from './login.page';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 describe('LoginPage', () => {
   let component: LoginPage;
@@ -22,7 +25,9 @@ describe('LoginPage', () => {
           MatButtonModule,
           MatFormFieldModule,
           MatInputModule,
-          RouterTestingModule
+          RouterTestingModule,
+          AngularFireModule.initializeApp(environment.firebaseConfig),
+          AngularFirestoreModule,
         ],
       }).compileComponents();
 
